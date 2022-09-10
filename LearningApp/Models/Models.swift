@@ -12,6 +12,7 @@ struct Module: Decodable, Identifiable {
     var id:Int
     var category:String
     var content: Content
+    var test: Test
 }
 
 struct Content: Decodable, Identifiable {
@@ -32,7 +33,7 @@ struct Lesson : Decodable, Identifiable {
     var explanation:String
 }
 
-struct Test: Identifiable, Decodable {
+struct Test: Decodable, Identifiable {
     
     var id:Int
     var image:String

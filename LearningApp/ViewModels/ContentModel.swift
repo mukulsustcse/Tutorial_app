@@ -14,10 +14,10 @@ class ContentModel: ObservableObject {
     
     init() {
         
-        getlocalData()
+        getLocalData()
     }
     
-    func getlocalData() {
+    func getLocalData() {
         
         
         // get a url to the json file
@@ -43,10 +43,11 @@ class ContentModel: ObservableObject {
         
         do {
             
-            // read the file into a data object
-            let style_data = try Data(contentsOf: styleUrl!)
+            // Read the file into a data object
+            let styleData = try Data(contentsOf: styleUrl!)
             
-            self.styleData = style_data
+            self.styleData = styleData
+            
             
         } catch {
             print(error)
