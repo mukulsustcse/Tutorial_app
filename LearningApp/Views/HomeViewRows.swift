@@ -44,6 +44,7 @@ struct HomeViewRows: View {
                     
                     // Description
                     Text(description)
+                        .multilineTextAlignment(.leading)
                         .padding(.bottom, 20)
                         .font(.caption)
                     
@@ -67,6 +68,7 @@ struct HomeViewRows: View {
                         
                     }
                 }
+                .padding(.leading, 20)
             }
             .padding(.horizontal, 20.0)
             
