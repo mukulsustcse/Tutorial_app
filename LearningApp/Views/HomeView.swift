@@ -55,6 +55,8 @@ struct HomeView: View {
             }
             .navigationTitle("Get Started")
         }
+        // x code 13 update
+        .navigationViewStyle(.stack)
     }
 }
 
