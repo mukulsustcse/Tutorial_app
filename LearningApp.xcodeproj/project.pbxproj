@@ -22,6 +22,7 @@
 		1C23537828CE21B7006E1228 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C23537728CE21B7006E1228 /* AVKit.framework */; };
 		1C23537A28CE22E2006E1228 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23537928CE22E2006E1228 /* Constants.swift */; };
 		1C383C1E28D11FBA0079F163 /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C383C1D28D11FBA0079F163 /* CodeTextView.swift */; };
+		1C383C3E28D153200079F163 /* RectangleCard_button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C383C3D28D153200079F163 /* RectangleCard_button.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		1C23537728CE21B7006E1228 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		1C23537928CE22E2006E1228 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1C383C1D28D11FBA0079F163 /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
+		1C383C3D28D153200079F163 /* RectangleCard_button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCard_button.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				1C23537428CE1F6F006E1228 /* ContentViewRow.swift */,
 				1C23537228CE1E54006E1228 /* ContentDetailView.swift */,
 				1C383C1D28D11FBA0079F163 /* CodeTextView.swift */,
+				1C383C3D28D153200079F163 /* RectangleCard_button.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				1C0991BA28CCE2F3002198F3 /* HomeView.swift in Sources */,
 				1C0991B828CCE2F3002198F3 /* LearningApp.swift in Sources */,
 				1C23537128CDFE35006E1228 /* ContentView.swift in Sources */,
+				1C383C3E28D153200079F163 /* RectangleCard_button.swift in Sources */,
 				1C23537328CE1E54006E1228 /* ContentDetailView.swift in Sources */,
 				1C0991CB28CCE457002198F3 /* ContentModel.swift in Sources */,
 				1C23537528CE1F70006E1228 /* ContentViewRow.swift in Sources */,

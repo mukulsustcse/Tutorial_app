@@ -28,19 +28,35 @@ struct HomeView: View {
                             
                             VStack(spacing: 20) {
                                 
-                                NavigationLink(destination: {
-                                    
+                                NavigationLink(tag: module.id,
+                                               selection: $model.currentContentSelected,
+                                               destination: {
                                     ContentView()
                                         .onAppear(perform: {
                                             model.beginModule(module.id)
                                         })
-                                    
-                                }, label: {
-                                    
+                                },
+                                               label: {
                                     // learning card
                                     HomeViewRows(image: module.content.image, title: "Learn \(module.category)", description: module.content.description, lessonString: String(module.content.lessons.count) + " Lessons", time: module.content.time)
-                                    
                                 })
+                                
+//                                NavigationLink(tag: module.id,
+//                                               selection: model.currentLessonIndex,
+//
+//                                               destination: {
+//
+//                                    ContentView()
+//                                        .onAppear(perform: {
+//                                            model.beginModule(module.id)
+//                                        })
+//
+//                                }, label: {
+//
+//                                    // learning card
+//                                    HomeViewRows(image: module.content.image, title: "Learn \(module.category)", description: module.content.description, lessonString: String(module.content.lessons.count) + " Lessons", time: module.content.time)
+//
+//                                })
                                 
                                 
                                 
