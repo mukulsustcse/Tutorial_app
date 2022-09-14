@@ -20,7 +20,7 @@ struct ContentView: View {
                 // Confirm that currentModule is set
                 if model.currentModule != nil {
                     
-                    ForEach(0..<model.currentModule!.content.lessons.count) {
+                    ForEach(0..<model.currentModule!.content.lessons.count, id:\.self) {
                         
                         index in
                         

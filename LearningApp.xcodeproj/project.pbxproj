@@ -23,6 +23,7 @@
 		1C23537A28CE22E2006E1228 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23537928CE22E2006E1228 /* Constants.swift */; };
 		1C383C1E28D11FBA0079F163 /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C383C1D28D11FBA0079F163 /* CodeTextView.swift */; };
 		1C383C3E28D153200079F163 /* RectangleCard_button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C383C3D28D153200079F163 /* RectangleCard_button.swift */; };
+		1CD9832D28D218280035AE33 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9832C28D218280035AE33 /* TestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		1C23537928CE22E2006E1228 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1C383C1D28D11FBA0079F163 /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
 		1C383C3D28D153200079F163 /* RectangleCard_button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCard_button.swift; sourceTree = "<group>"; };
+		1CD9832C28D218280035AE33 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				1C23537028CDFE35006E1228 /* ContentView.swift */,
 				1C23537428CE1F6F006E1228 /* ContentViewRow.swift */,
 				1C23537228CE1E54006E1228 /* ContentDetailView.swift */,
+				1CD9832C28D218280035AE33 /* TestView.swift */,
 				1C383C1D28D11FBA0079F163 /* CodeTextView.swift */,
 				1C383C3D28D153200079F163 /* RectangleCard_button.swift */,
 			);
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CD9832D28D218280035AE33 /* TestView.swift in Sources */,
 				1C0991BA28CCE2F3002198F3 /* HomeView.swift in Sources */,
 				1C0991B828CCE2F3002198F3 /* LearningApp.swift in Sources */,
 				1C23537128CDFE35006E1228 /* ContentView.swift in Sources */,

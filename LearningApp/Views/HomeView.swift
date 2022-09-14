@@ -41,27 +41,26 @@ struct HomeView: View {
                                     HomeViewRows(image: module.content.image, title: "Learn \(module.category)", description: module.content.description, lessonString: String(module.content.lessons.count) + " Lessons", time: module.content.time)
                                 })
                                 
-//                                NavigationLink(tag: module.id,
-//                                               selection: model.currentLessonIndex,
-//
-//                                               destination: {
-//
-//                                    ContentView()
-//                                        .onAppear(perform: {
-//                                            model.beginModule(module.id)
-//                                        })
-//
-//                                }, label: {
-//
-//                                    // learning card
-//                                    HomeViewRows(image: module.content.image, title: "Learn \(module.category)", description: module.content.description, lessonString: String(module.content.lessons.count) + " Lessons", time: module.content.time)
-//
-//                                })
+                                NavigationLink(tag: module.id,
+                                               selection: $model.currentTestSelected,
+                                               destination: {
+                                    TestView()
+                                        .onAppear(perform: {
+                                            model.beginTest(module.id)
+                                        })
+                                },
+                                               label: {
+                                    
+                                    // test card
+                                    HomeViewRows(image: module.test.image, title: "\(module.category) Test", description: module.test.description, lessonString: "\(module.test.questions.count) Lessons", time: module.test.time)
+                                })
                                 
                                 
+                                // iOS 14.5 or above bug solve
                                 
-                                // test card
-                                HomeViewRows(image: module.test.image, title: "\(module.category) Test", description: module.test.description, lessonString: "\(module.test.questions.count) Lessons", time: module.test.time)
+                                //                                NavigationLink(destination: EmptyView(), label: {
+                                //                                    EmptyView()
+                                //                                })
                             }
                         }
                     }
