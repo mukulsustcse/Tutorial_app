@@ -146,7 +146,9 @@ struct TestView: View {
             
             // Test hasn't loadead yet
             // iOS 14.5+ bug solve
-            ProgressView()
+//            ProgressView()
+            
+            ResultView(numCorrect: numCorrect)
         }
     }
     
