@@ -13,6 +13,21 @@ struct ContentViewRow: View {
     
     var index:Int
     
+    var lesson: Lesson {
+        
+        // if index < model.currentModule?.content.lessons.count ?? 0
+        // if model.currentModule != nil && index < model.currentModule!.content.lessons.count
+        
+        if model.currentModule != nil && index < model.currentModule!.content.lessons.count {
+            
+            return model.currentModule!.content.lessons[index]
+        }
+        else {
+            
+            return Lesson(id: 0, title: "", video: "", duration: "", explanation: "")
+        }
+    }
+    
     var body: some View {
         
         let lesson = model.currentModule!.content.lessons[index]

@@ -70,6 +70,20 @@ struct HomeView: View {
                 }
             }
             .navigationTitle("Get Started")
+            .onChange(of: model.currentContentSelected) { changedValue in
+                
+                if changedValue == nil {
+                    
+                    model.currentModule = nil
+                }
+            }
+            .onChange(of: model.currentTestSelected) { newValue in
+                
+                if newValue == nil {
+                    
+                    model.currentModule = nil
+                }
+            }
         }
         // x code 13 update
         .navigationViewStyle(.stack)

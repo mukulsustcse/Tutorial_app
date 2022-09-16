@@ -122,8 +122,11 @@ class ContentModel: ObservableObject {
                 // decode
                 let modules = try decoder.decode([Module].self, from: data!)
                 
-                // append parsed modules into modules property
-                self.modules += modules
+                DispatchQueue.main.async {
+                    
+                    // append parsed modules into modules property
+                    self.modules += modules
+                }
             }
             catch {
                 
@@ -182,10 +185,13 @@ class ContentModel: ObservableObject {
         // check that it is within range
         if currentLessonIndex < currentModule!.content.lessons.count {
             
-            // set the current lesson property
-            currentLesson = currentModule!.content.lessons[currentLessonIndex]
-            
-            codeText = addStyling(currentLesson!.explanation)
+            DispatchQueue.main.async {
+                
+                // set the current lesson property
+                self.currentLesson = self.currentModule!.content.lessons[self.currentLessonIndex]
+                
+                self.codeText = self.addStyling(self.currentLesson!.explanation)
+            }
         }
         else {
             // reset the lesson state
@@ -195,6 +201,11 @@ class ContentModel: ObservableObject {
     }
     
     func hasNextLesson() -> Bool {
+        
+        guard currentModule != nil else {
+            
+            return false
+        }
         
         return (currentLessonIndex + 1 < currentModule!.content.lessons.count)
         
