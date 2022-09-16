@@ -35,10 +35,14 @@ class ContentModel: ObservableObject {
     
     init() {
         
+        // parse local json data
         getLocalData()
+        
+        // download remote json file and parse data
+        getRemoteData()
     }
     
-    // MARK: Data JSON parsing
+    // MARK: local JSON parsing
     
     func getLocalData() {
         
@@ -75,6 +79,63 @@ class ContentModel: ObservableObject {
             //            print(error)
             print("Cannot parse style data")
         }
+    }
+    
+    // MARK: remote JSON parsing
+    
+    func getRemoteData() {
+        
+        // https://mukulsustcse.github.io/Tutorial_app_data/data2.json
+        
+        // string path
+        
+        let urlString = "https://mukulsustcse.github.io/Tutorial_app_data/data2.json"
+        
+        let url = URL(string: urlString)
+        
+        guard url != nil else {
+            
+            // cannot create url
+            return
+        }
+        
+        // create a URL Request object
+        let request = URLRequest(url: url!)
+        
+        // get the session and kick off the task
+        
+        let session = URLSession.shared
+        
+        let dataTask = session.dataTask(with: request) { data, response, error in
+            
+            // check if there is an error
+            guard error == nil else {
+                
+                // there was an error
+                return
+            }
+            
+            do {
+                // create json decoder
+                let decoder = JSONDecoder()
+                
+                // decode
+                let modules = try decoder.decode([Module].self, from: data!)
+                
+                // append parsed modules into modules property
+                self.modules += modules
+            }
+            catch {
+                
+                print(error)
+            }
+            
+            // handle the response
+            
+        }
+        
+        // kick off data task
+        dataTask.resume()
     }
     
     // MARK: Module navigation methods
